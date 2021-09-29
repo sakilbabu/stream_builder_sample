@@ -6,6 +6,9 @@ class MyHomePage extends StatelessWidget {
     while (true) {
       await Future.delayed(Duration(seconds: 1));
       yield i++;
+      if (i % 5 == 0) {
+        await Future.delayed(Duration(seconds: 3));
+      }
       if (i == 100) {
         break;
       }
